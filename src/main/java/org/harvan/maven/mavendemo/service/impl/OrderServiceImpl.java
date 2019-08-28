@@ -27,7 +27,8 @@ public class OrderServiceImpl implements OrderService {
   public List<OrderResponse> findAll() {
     QOrder qOrder = QOrder.order;
 
-    return orderRepository.findAll().stream().map(MAPPER::mapFromModel)
+    return orderRepository.findAll().stream()
+        .map(MAPPER::mapFromModel)
         .collect(Collectors.toList());
   }
 

@@ -6,6 +6,4 @@ import org.springframework.context.annotation.Configuration;
 
 @EnableConfigurationProperties(TestProperties.class)
 @Configuration
-public class TestConfiguration {
-
-}
+public class TestConfiguration {}

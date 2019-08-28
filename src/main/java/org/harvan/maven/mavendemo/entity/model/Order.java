@@ -21,57 +21,39 @@ public class Order {
   @Column
   private Long id;
 
-  @Column
-  private ZonedDateTime createdAt;
+  @Column private ZonedDateTime createdAt;
 
-  @Column
-  private ZonedDateTime updatedAt;
+  @Column private ZonedDateTime updatedAt;
 
-  @Column
-  private String status;
+  @Column private String status;
 
-  @Column
-  private String applicationOrderId;
+  @Column private String applicationOrderId;
 
-  @Column
-  private Long applicationId;
+  @Column private Long applicationId;
 
-  @Column
-  private String applicationName;
+  @Column private String applicationName;
 
-  @Column
-  private String applicationLogoUrl;
+  @Column private String applicationLogoUrl;
 
-  @Column
-  private Long outletId;
+  @Column private Long outletId;
 
-  @Column
-  private Long businessId;
+  @Column private Long businessId;
 
-  @Column
-  private Long paymentId;
+  @Column private Long paymentId;
 
-  @Column
-  private String paymentType;
+  @Column private String paymentType;
 
-  @Column
-  private String note;
+  @Column private String note;
 
-  @Column
-  private String completeOrderNotificationUrl;
+  @Column private String completeOrderNotificationUrl;
 
-  @Column
-  private String acceptOrderNotificationUrl;
+  @Column private String acceptOrderNotificationUrl;
 
-  @Column
-  private String cancelOrderNotificationUrl;
+  @Column private String cancelOrderNotificationUrl;
 
-  @Column
-  private String assignExpeditionNotificationUrl;
+  @Column private String assignExpeditionNotificationUrl;
 
-  @Column
-  private Long salesTypeId;
+  @Column private Long salesTypeId;
 
-  @Column
-  private String salesTypeName;
+  @Column private String salesTypeName;
 }

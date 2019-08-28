@@ -27,15 +27,17 @@ public class OrderController {
 
   @RequestMapping("/id/{id}")
   public Mono<OrderResponse> findById(@PathVariable @Valid @NotNull Long id) {
-    return Mono.defer(() -> orderService.findById(id)
-        .map(Mono::just)
-        .orElseGet(() -> Mono.error(new NotFoundException("Order not found"))))
+    return Mono.defer(
+            () ->
+                orderService
+                    .findById(id)
+                    .map(Mono::just)
+                    .orElseGet(() -> Mono.error(new NotFoundException("Order not found"))))
         .subscribeOn(elastic());
   }
 
   @RequestMapping
   public Flux<OrderResponse> findAll() {
-    return Flux.defer(() -> Flux.fromIterable(orderService.findAll()))
-        .subscribeOn(elastic());
+    return Flux.defer(() -> Flux.fromIterable(orderService.findAll())).subscribeOn(elastic());
   }
 }

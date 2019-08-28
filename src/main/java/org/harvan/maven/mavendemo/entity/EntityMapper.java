@@ -6,6 +6,5 @@ public class EntityMapper {
 
   public static final EntityBeanMapper MAPPER = Mappers.getMapper(EntityBeanMapper.class);
 
-  private EntityMapper() {
-  }
+  private EntityMapper() {}
 }

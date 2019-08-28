@@ -6,6 +6,5 @@ class WebMapper {
 
   static final WebBeanMapper MAPPER = Mappers.getMapper(WebBeanMapper.class);
 
-  private WebMapper() {
-  }
+  private WebMapper() {}
 }
