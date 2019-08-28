@@ -1,0 +1,2 @@
+#!/bin/sh
+mvn com.coveo:fmt-maven-plugin:check
