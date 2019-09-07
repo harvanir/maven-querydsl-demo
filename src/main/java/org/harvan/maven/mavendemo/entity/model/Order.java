@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Version;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -56,4 +57,6 @@ public class Order {
   @Column private Long salesTypeId;
 
   @Column private String salesTypeName;
+
+  @Column @Version Integer version;
 }
